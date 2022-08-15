@@ -28,5 +28,5 @@ int main()
     }
  
     cout << x << endl;
-    getch;
+    getch ();
 }
