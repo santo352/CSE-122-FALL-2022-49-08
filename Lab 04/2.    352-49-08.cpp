@@ -3,25 +3,26 @@
 
 #include<iostream>
 include<conio.h>
-using namespace std;
-string a, b;
 int main() {
-    cin >> a >> b;
-    for (int i = 0; i < a.size(); i++) {
-        if (a[i] < 92) {
-            a[i] += 32;
-        }
-        if (b[i] < 92) {
-            b[i] += 32;
-        }
-    }
-    if (a < b) {
-        cout << -1;
-    } else if (a > b) {
-        cout << 1;
-    } else if (a == b) {
-        cout << 0;
-    }
-  getch();
+	int arr[1001];
+	string s;
+	cin>>s;
+	int count=0;
+	for(int i=0;i<s.size();i++){
+	    if(s[i]=='+'){
+	        continue;
+	    }else{
+	        arr[count++]=s[i]-'0';
+	    }
+	}
+	sort(arr,arr+count);
+	for(int i=0;i<count;i++){
+	    cout<<arr[i];
+	    if(i==count-1){
+	        break;
+	    }
+	    cout<<"+";
+	}
+	getch();
 }
 
